@@ -1,3 +1,7 @@
+package day1
+
+import java.io.File
+
 fun main() {
     fun part1(input: List<Int>): Int {
         return input.windowed(2).count { (a, b) -> a < b }
@@ -12,7 +16,9 @@ fun main() {
             }
     }
 
-    val input = readInputAsInts("Day01")
-    println(part1(input))
-    println(part2(input))
+    val input = File("src/day1/input.txt")
+        .readLines()
+        .map { it.toInt() }
+    println("Part 1: ${part1(input)}")
+    println("Part 2: ${part2(input)}")
 }
