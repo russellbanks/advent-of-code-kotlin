@@ -33,8 +33,8 @@ fun main() {
         return horizontal * depth
     }
 
-    val input = File("src/day2/input.txt")
-        .readLines()
-    println("Part 1: ${part1(input)}")
-    println("Part 2: ${part2(input)}")
+    File("src/day2/input.txt").readLines().also {
+        println("Part 1: ${part1(it)}")
+        println("Part 2: ${part2(it)}")
+    }
 }
